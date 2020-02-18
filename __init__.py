@@ -44,6 +44,12 @@ if module == "call_":
     private_key = GetParams('private_key')
     number_ = GetParams('number_')
     message_ = GetParams('message_')
+    language_ = GetParams('language_')
+
+    if language_ == "spanish_":
+        voice = "Enrique"
+    if language_ == "english_":
+        voice = "Joey"
 
     try:
 
@@ -55,7 +61,7 @@ if module == "call_":
         ncco = [
             {
                 'action': 'talk',
-                'voiceName': 'Enrique',
+                'voiceName': voice,
                 'text': message_
             }
         ]

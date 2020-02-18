@@ -1,6 +1,6 @@
 {
-    "author":"Marcela Vergara",
-    "description": "Módulo para llamada con Nexmo",
+    "author":"Marcela Vergara - marcela@rocketbot.cl",
+    "description": "Módulo para realizar llamada con Nexmo",
     "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
     "version":"0.3",
     "license": "MIT",
@@ -65,6 +65,30 @@
                         "css": "col-md-6"
                     },
                     {
+                        "type": "select",
+
+                        "title": {
+                            "es": "Seleccione idioma de la llamada:",
+                            "en": "Select call language:"
+                        },
+                        "options": [
+                        {
+                        "title": "--Seleccionar--",
+                        "value": ""
+                        },
+                            {
+                        "title": "Spanish",
+                        "value": "spanish_"
+                        },
+                             {
+                        "title": "English",
+                        "value": "english_"
+                        }
+                        ],
+                        "id": "language_",
+                        "css": "col-md-6"
+                    },
+                    {
                         "type": "input",
 
                         "title": {
@@ -75,7 +99,7 @@
                             "es": "56999999999",
                             "en": "56999999999"
                         },
-                        "id": "number_",
+                        "id": "language",
                         "css": "col-md-6"
                     },
                     {
@@ -89,7 +113,7 @@
                             "en": "Call message:"
                         },
                         "id": "message_",
-                        "css": "col-md-6"
+                        "css": "col-md-12"
                     }
                 ]
             },
@@ -109,13 +133,13 @@
           {
             "en": {
                 "title": "Consult Number",
-                "description": "Obtain information from the number consulted",
+                "description": "Obtain information from the number consulted (you must create an account at https://www.nexmo.com/)",
                 "title_options": null,
                 "options":null
             },
             "es": {
                 "title": "Consultar Número",
-                "description": "Trae información del número consultado",
+                "description": "Trae información del número consultado (debes crear una cuenta en https://www.nexmo.com/)",
                 "title_options": null,
                 "options":null
             },
@@ -133,16 +157,15 @@
                             "es": "API Key:",
                             "en": "API Key:"
                         },
-                        "help": {
-                            "es": "Más información en https://www.nexmo.com/",
-                            "en": "More info in https://www.nexmo.com/"
-                        },
                         "id": "key_",
                         "css": "col-md-6"
                     },
                     {
                         "type": "input",
-
+                        "placeholder": {
+                            "es": "******",
+                            "en": "******"
+                        },
                         "title": {
                             "es": "Secret:",
                             "en": "Secret:"
@@ -152,7 +175,10 @@
                     },
                     {
                         "type": "input",
-
+                        "placeholder": {
+                            "es": "56999999999",
+                            "en": "56999999999"
+                        },
                         "title": {
                             "es": "Número a consultar:",
                             "en": "Number to consult:"
@@ -162,7 +188,10 @@
                     },
                     {
                         "type": "input",
-
+                        "placeholder": {
+                            "es": "Variable",
+                            "en": "Variable"
+                        },
                         "title": {
                             "es": "Asignar resultado a variable:",
                             "en": "Assign result to vaiable:"
